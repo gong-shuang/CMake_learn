@@ -12,11 +12,12 @@ import shutil
 from pathlib import Path
 
 def find_projects(root_dir: Path):
-    """返回所有包含 CMakeLists.txt 的子目录列表（不递归）"""
+    """返回所有包含 CMakeLists.txt 的子目录列表（递归搜索，排除 build 目录）"""
     projects = []
-    for child in root_dir.iterdir():
-        if child.is_dir() and (child / "CMakeLists.txt").is_file():
-            projects.append(child)
+    for cmake_file in root_dir.rglob("CMakeLists.txt"):
+        project_dir = cmake_file.parent
+        if "build" not in project_dir.parts:
+            projects.append(project_dir)
     return projects
 
 def build_project(project_path: Path) -> bool:

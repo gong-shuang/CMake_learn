@@ -1,0 +1,42 @@
+
+
+目录结构：
+07_cmake_advanced_topics/
+├── 01_custom_modules/         # 自定义 CMake 模块和脚本
+├── 02_build_configs/          # 构建配置和目标
+├── 03_advanced_find/          # 高级查找和配置
+├── 04_custom_build_steps/     # 生成自定义构建步骤
+├── 05_cross_compilation/      # 跨平台和交叉编译
+└── 06_target_properties/      # 目标属性和配置
+
+## 每个例子的功能
+1. 自定义 CMake 模块和脚本 ：
+   - 创建了自定义 CMake 模块 MyCustomModule.cmake
+   - 实现了自定义函数和宏
+   - 展示了如何在 CMake 中模块化代码
+2. 构建配置和目标 ：
+   - 定义了多个构建目标（debug、release、optimized）
+   - 为不同目标设置不同的编译选项
+   - 展示了如何管理多个构建配置
+3. 高级查找和配置 ：
+   - 使用 find_package 查找多个库（OpenGL、OpenMP、Python）
+   - 根据查找结果进行条件配置
+   - 展示了如何灵活处理外部依赖
+4. 生成自定义构建步骤 ：
+   - 使用 add_custom_command 生成版本文件
+   - 创建了多个自定义目标（documentation、clean_all、build_and_doc）
+   - 展示了如何扩展构建过程
+5. 跨平台和交叉编译 ：
+   - 实现了平台特定的配置（Windows、macOS、Linux、Android、iOS）
+   - 处理交叉编译场景
+   - 展示了如何编写跨平台的 CMake 代码
+6. 目标属性和配置 ：
+   - 使用 set_target_properties 设置目标属性
+   - 为不同目标设置不同的编译选项
+   - 展示了如何精细控制目标配置
+
+
+每个例子都是独立的项目，可以单独构建和运行：
+cd 07_cmake_advanced_topics/01_custom_modules
+mkdir -p build && cd build
+cmake .. && make && ./custom_modules_app
