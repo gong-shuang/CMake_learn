@@ -1,0 +1,13 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+// Project version
+#define PROJECT_VERSION "@PROJECT_VERSION@"
+
+// Build type
+#define BUILD_TYPE "@CMAKE_BUILD_TYPE@"
+
+// Compiler information
+#define COMPILER_ID "@CMAKE_CXX_COMPILER_ID@"
+
+#endif // CONFIG_H
