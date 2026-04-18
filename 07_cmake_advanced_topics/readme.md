@@ -22,12 +22,14 @@ cmake .. && make && ./custom_modules_app
    - 创建了自定义 CMake 模块 MyCustomModule.cmake
    - 实现了自定义函数和宏
    - 展示了如何在 CMake 中模块化代码
+
 调用另一个cmake文件中定义的函数和宏
 
 ## 2. 构建配置和目标 ：
    - 定义了多个构建目标（debug、release、optimized）
    - 为不同目标设置不同的编译选项
    - 展示了如何管理多个构建配置
+
 一次编译，就可以生成多个不同版本的（debug、release、optimized）可执行文件
 
 ## 3. 高级查找和配置 ：
